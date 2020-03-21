@@ -15,31 +15,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="仔細觀察上面的視線錯覺插畫。你看見了甚麼？" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyB-5d-ajD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VyB-5d-ajD">
                                 <rect key="frame" x="0.0" y="88" width="414" height="111"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="8CN-bV-hM7">
-                                <rect key="frame" x="0.0" y="189" width="414" height="381"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LQ-YK-SuE">
-                                <rect key="frame" x="74" y="605" width="267" height="55"/>
+                                <rect key="frame" x="77" y="605" width="260" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="如果你看到了一輛車"/>
                                 <connections>
                                     <segue destination="iSu-ri-jzi" kind="show" destinationCreationSelector="showAnswer1:" id="Z8t-kI-0ei"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4b-cE-dYs">
+                                <rect key="frame" x="0.0" y="207" width="414" height="345"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lv5-eH-0tl">
-                                <rect key="frame" x="74" y="710" width="267" height="55"/>
+                                <rect key="frame" x="77" y="707" width="260" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="如果你看到一個男人使用望遠鏡"/>
                                 <connections>
                                     <segue destination="iSu-ri-jzi" kind="show" destinationCreationSelector="showAnswer2:" id="ijg-hB-jZ6"/>
                                 </connections>
@@ -50,13 +48,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="心理測驗" id="0I4-tO-V3I"/>
                     <connections>
-                        <outlet property="answer1" destination="2LQ-YK-SuE" id="pmO-gH-Eep"/>
-                        <outlet property="answer2" destination="Lv5-eH-0tl" id="9gX-8h-sIs"/>
+                        <outlet property="choose1" destination="2LQ-YK-SuE" id="pmO-gH-Eep"/>
+                        <outlet property="choose2" destination="Lv5-eH-0tl" id="9gX-8h-sIs"/>
+                        <outlet property="picImageView" destination="d4b-cE-dYs" id="wSH-tW-WQ2"/>
+                        <outlet property="titleLabel" destination="VyB-5d-ajD" id="2z5-jT-fku"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="943" y="119"/>
+            <point key="canvasLocation" x="942.02898550724649" y="118.52678571428571"/>
         </scene>
         <!--Answer1 View Controller-->
         <scene sceneID="FMP-H4-9Ua">
@@ -73,6 +73,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3u-9V-fH4">
+                                <rect key="frame" x="267" y="755" width="106" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="下一題"/>
+                                <connections>
+                                    <segue destination="CEy-Jm-LvO" kind="unwind" unwindAction="backToQuestion:" id="ed4-M0-jzS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.9754601862469543" blue="0.68808155748562017" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="dHL-Rb-7Ag"/>
@@ -83,8 +92,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SM3-Gt-FzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="CEy-Jm-LvO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="119"/>
+            <point key="canvasLocation" x="2530" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ShY-ed-YVz">
@@ -108,7 +118,4 @@
     <inferredMetricsTieBreakers>
         <segue reference="Z8t-kI-0ei"/>
     </inferredMetricsTieBreakers>
-    <resources>
-        <image name="0" width="787" height="590"/>
-    </resources>
 </document>
